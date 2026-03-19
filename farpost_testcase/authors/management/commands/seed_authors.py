@@ -9,13 +9,14 @@ class Command(BaseCommand):
         Blog = apps.get_model('authors', 'Blog')
         Post = apps.get_model('authors', 'Post')
 
-        author1, _ = Author.objects.get_or_create(login='Nikita', email='nikita@example.com')
-        author2, _ = Author.objects.get_or_create(login='Andrey', email='andrey@example.com')
-        author3, _ = Author.objects.get_or_create(login='Alexey', email='alexey@example.com')
+        # Создаём авторов
+        author1, _ = Author.objects.get_or_create(login='nikita', email='nikita@example.com')
+        author2, _ = Author.objects.get_or_create(login='andrey', email='andrey@example.com')
+        author3, _ = Author.objects.get_or_create(login='alexey', email='alexey@example.com')
 
         # Создаём блоги
-        blog1, _ = Blog.objects.get_or_create(owner=author1, name="Alice's Blog", description="About everything")
-        blog2, _ = Blog.objects.get_or_create(owner=author2, name="Bob's Tech Blog", description="Tech stuff")
+        blog1, _ = Blog.objects.get_or_create(owner=author1, name="Nikit's Blog", description="About everything")
+        blog2, _ = Blog.objects.get_or_create(owner=author2, name="Andrey's Tech Blog", description="Tech stuff")
 
         # Создаём посты
         post1, _ = Post.objects.get_or_create(header="First Post", text="Hello world", author=author1, blog=blog1)
