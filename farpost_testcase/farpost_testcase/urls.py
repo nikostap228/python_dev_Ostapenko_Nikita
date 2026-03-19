@@ -16,9 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.debug import default_urlconf
 from authors.views import CommentsView, GeneralView
 
+def home(request):
+    return default_urlconf(request)
+
 urlpatterns = [
+    path('', home),
     path('admin/', admin.site.urls),
     path('api/', include('authors.urls')),
     path('api/comments/', CommentsView.as_view()),

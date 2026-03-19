@@ -53,15 +53,17 @@ python manage.py runserver
 ```
 ### Просмотр логов
 
-Логи можно просмотреть по пути:
+#### Логи можно просмотреть по пути:
 ```bash
 http://127.0.0.1:8000/api/comments/?login=Nikita
+http://127.0.0.1:8000/api/general/?login=Nikita
 ```
-Либо 
+#### Либо 
 
-http://127.0.0.1:8000/api/comments/?login=<login> любой из существующих
+http://127.0.0.1:8000/api/comments/?login= любой из существующих
 
-Есть пользователи:
+#### Есть пользователи:
+
 Nikita
 Andrey
 Alexey
