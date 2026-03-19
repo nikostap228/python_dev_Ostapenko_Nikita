@@ -25,6 +25,9 @@ venv\Scripts\activate
 python3 -m venv venv
 source venv/bin/activate
 
+
+# Установка зависимостей
+cd farpost_testcase
 pip install -r requirements.txt
 
 # Скопируйте файл с примером переменных
@@ -46,3 +49,22 @@ python manage.py seed_authors
 
 # Запуск сервера
 python manage.py runserver 
+
+```
+### Просмотр логов
+
+Логи можно просмотреть по пути:
+```bash
+http://127.0.0.1:8000/api/comments/?login=Nikita
+```
+Либо 
+
+http://127.0.0.1:8000/api/comments/?login=<login> любой из существующих
+
+Есть пользователи:
+Nikita
+Andrey
+Alexey
+nikita
+andrey
+alexey
